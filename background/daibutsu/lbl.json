@@ -1,0 +1,1 @@
+{"source-ref":"s3://custom-labels-testproject7/KAMAKURA_TE_028.jpg","TestProject-train_KAMAKURA":1,"TestProject-train_KAMAKURA-metadata":{"confidence":1,"job-name":"labeling-job/TestProject-train_KAMAKURA","class-name":"KAMAKURA","human-annotated":"yes","creation-date":"2022-05-17T15:38:44.259Z","type":"groundtruth/image-classification"},"cl-metadata":{"is_labeled":true}}

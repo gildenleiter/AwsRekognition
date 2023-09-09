@@ -1,0 +1,1 @@
+{"source-ref":"s3://custom-labels-testproject5/HEIAN_TE_029.jpg","TestProject-train_HEIAN":1,"TestProject-train_HEIAN-metadata":{"confidence":1,"job-name":"labeling-job/TestProject-train_HEIAN","class-name":"HEIAN","human-annotated":"yes","creation-date":"2022-05-17T15:38:44.259Z","type":"groundtruth/image-classification"},"cl-metadata":{"is_labeled":true}}
