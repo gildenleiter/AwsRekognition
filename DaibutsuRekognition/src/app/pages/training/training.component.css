@@ -1,0 +1,34 @@
+.flex{
+    display: flex;
+    border: 1px solid #333;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+   }
+
+img.fileImage { 
+    object-fit: contain;
+    width: 350px;
+    height: 350px;
+    border: 1px solid darkgray;
+}
+
+.container {
+    height: 200px;
+    width: 80%;
+    overflow: auto;
+    margin: auto;
+  }
+  
+  table {
+    width: 100%;
+  
+  }
+  
+  .header-row {
+    background-color: rgb(179, 207, 209);
+  }

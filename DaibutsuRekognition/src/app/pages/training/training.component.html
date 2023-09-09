@@ -1,0 +1,80 @@
+<!-- html -->
+<div>
+    トレーニング／テストデータ作成
+</div>
+<div>
+        <select id="listProject">
+        </select>
+        <div class="upload">
+            <input type="file" accept="image/*" id="imageFile" multiple (change)="onChangeFileInput($event)" />                
+        </div>
+        <!--
+        <div>
+            <input type="button" value="S3アップロード" (click)="onS3Upload()" />
+        </div>
+        -->
+        <div>
+            <input type="text" id="label" name="" list="listLabel" placeholder="ラベル" autocomplete="off">
+            <datalist id="listLabel">
+                <option value="英語">
+                <option value="日本語">
+                <option value="スペイン語">
+            </datalist>
+        </div>
+        <div>
+            <input type="button" value="Training" (click)="onTraining()" />
+            <input type="button" value="Test" (click)="onTest()" />
+            <input type="button" value="Cancel" (click)="onCancel()" />
+        </div>        
+</div>
+<div>
+    トレーニングデータ
+    <input type="button" value="一覧取得" (click)="getTrainingData()" />
+</div>
+<div>
+    <section class="container">
+        <table mat-table [dataSource]="trainingData">
+          <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef> id </th>
+            <td mat-cell *matCellDef="let data"> {{data.id}} </td>
+          </ng-container>
+    
+          <ng-container matColumnDef="action">
+            <th mat-header-cell *matHeaderCellDef> action </th>
+            <td mat-cell *matCellDef="let element" class="action-link">
+                <a (click)="deleteData(element)"><button mat-raised-button>削除</button></a>
+            </td>
+          </ng-container>
+      
+          <tr class="header-row" mat-header-row *matHeaderRowDef="columnName; sticky: true"></tr>
+          <tr mat-row *matRowDef="let row; columns: columnName;"></tr>
+        </table>
+      </section>
+</div>
+<div>
+    テストデータ
+    <input type="button" value="一覧取得" (click)="getTestData()" />
+</div>
+<div>
+    <section class="container">
+        <table mat-table [dataSource]="testData">
+          <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef> id </th>
+            <td mat-cell *matCellDef="let element" class="action-link">
+              <a href="" (click)="getTestDataImage(element)">{{element.id}}</a>
+            </td>
+          </ng-container>
+    
+          <ng-container matColumnDef="action">
+            <th mat-header-cell *matHeaderCellDef> action </th>
+            <td mat-cell *matCellDef="let element" class="action-link">
+                <a (click)="deleteData(element)"><button mat-raised-button>削除</button></a>
+            </td>
+          </ng-container>
+      
+          <tr class="header-row" mat-header-row *matHeaderRowDef="columnName; sticky: true"></tr>
+          <tr mat-row *matRowDef="let row; columns: columnName;"></tr>
+        </table>
+      </section>
+</div>
+

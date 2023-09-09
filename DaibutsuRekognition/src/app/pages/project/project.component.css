@@ -1,0 +1,15 @@
+.container {
+    height: 400px;
+    width: 80%;
+    overflow: auto;
+    margin: auto;
+  }
+  
+  table {
+    width: 100%;
+  
+  }
+  
+  .header-row {
+    background-color: rgb(179, 207, 209);
+  }

@@ -1,0 +1,30 @@
+<!-- html -->
+<div class="flex">
+    <select id="listProject" (change)="onChangeProjectId()">
+    </select>
+    <div>
+        <div class="upload">
+            <input type="file" accept="image/*" id="imageFile"
+                (change)="onChangeFileInput($event)">
+        </div>
+        <div>
+            <img class="fileImage" [src]="imgSrc" alt="">
+        </div>
+        <div>
+            <input type="button" value="S3アップロード" (click)="onS3Upload()" />
+            <input type="button" id="startCustomModel" value="画像解析起動" (click)="onStartCustomModel()" />
+            <input type="button" id="stopCustomModel" value="画像解析停止" (click)="onStopCustomModel()" />
+            <input type="button" id="playCustomModel" value="画像解析実施" (click)="onCustomModel()" />
+        </div>
+    </div>
+    <div>
+        <div>
+            <p id="status">
+            </p>
+        </div>
+        <div>
+            <p id="resultLog">
+            </p>
+        </div>
+    </div>
+</div>
